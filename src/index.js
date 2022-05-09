@@ -40,6 +40,7 @@ async function initProcessors() {
         .filter((token) => token !== '');
     },
   };
+  stemmers.bn = new langAll.StemmerBn();
   stemmers.km = new StemmerKm();
   stemmers.my = new StemmerMy();
   stemmers.nb = langAll.getStemmer('no');
