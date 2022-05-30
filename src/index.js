@@ -1,6 +1,7 @@
 const langAll = require('@nlpjs/lang-all');
 const StemmerKm = require('./stemmer-km');
 const StemmerMy = require('./stemmer-my');
+const StemmerAz = require('./stemmer-az');
 
 const stemmers = {};
 const processors = {};
@@ -40,6 +41,7 @@ async function initProcessors() {
         .filter((token) => token !== '');
     },
   };
+  stemmers.az = new StemmerAz();
   stemmers.bn = new langAll.StemmerBn();
   stemmers.km = new StemmerKm();
   stemmers.my = new StemmerMy();
